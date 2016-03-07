@@ -1,0 +1,41 @@
+h1 {
+font-family:Halvetica;
+font-weight:100;
+text-align:center;
+}
+body{
+font-family:arial;
+font-weight:180;
+text-align:center-right;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 25%;
+background-color: #f1f1f1;
+position: fixed;
+height: 100%;
+overflow: auto;
+}
+
+li a {
+display: block;
+color: #000;
+padding: 8px 0 8px 16px;
+text-decoration: none;
+}
+li a.active {
+background-color: #4BAB89;
+color: white;
+}
+
+nav {
+line-height:30px;
+background-color:#eeeeee;
+height:300px;
+width:100px;
+float:left;
+padding:5px; 
+}
