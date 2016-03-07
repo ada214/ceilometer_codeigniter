@@ -10,7 +10,7 @@ $head= "{'Content-Type': 'application/json','Accept': 'application/json',}";
 
 $url='http://icoset1cs1.ad2lab.com:5000/v3/auth/tokens';
 
-$body= '{"auth": {"identity": { "methods": ["password"],"password": {"user": {"name": "admin","domain": { "id": "default" },"password": "passw0rd" }}}}}';
+$body= '{"auth": {"identity": { "methods": ["password"],"password": {"user": {"name": "'.$username.'","domain": { "id": "default" },"password":"'.$password.'"}}}}}';
 
 
 
@@ -38,7 +38,7 @@ $token = substr($header,39,32);
 
 
 
-#print_r($token);
+print_r($token);
 
 
 curl_close($curl);
@@ -46,5 +46,5 @@ curl_close($curl);
 return $token;
 }
 
-#$res = getToken();
+$res = getToken();
 ?>
