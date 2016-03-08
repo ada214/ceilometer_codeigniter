@@ -7,7 +7,7 @@
 
 
 <?php echo link_tag('css/alarm.css'); ?>
-
+<?php echo link_tag('css/update.css');?>
 
 
 
@@ -50,13 +50,16 @@ if(comparison_operator !== "gt" && comparison_operator !== "lt" && comparison_op
 
 <body>
 
+
+
+
 <!--
 <?php echo heading("Update alarm"); ?>
 -->
 
 <?php 
-
-$form_attr = array("name"=>"updatealarm","onsubmit"=>"return validate()");
+include('nav.php');
+$form_attr = array("name"=>"updatealarm","onsubmit"=>"return validate()","class"=>"form");
 
 echo form_open('pages/updatealarm_script',$form_attr); ?>
 <fieldset>

@@ -4,7 +4,8 @@
 
 <?php echo link_tag('css/form.css'); ?>
 
-<?php echo form_open('pages/deletealarm_script'); ?>
+<?php include('nav.php'); ?>
+<?php echo form_open('pages/deletealarm_scripti',array("class"=>"form")); ?>
 
 <fieldset>
     <legend><h2>Delete alarm </h2></legend>

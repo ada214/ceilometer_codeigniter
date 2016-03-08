@@ -2,9 +2,12 @@
 <head>
 
 
+<div class="vmlist">
+
 
 <?php
 echo link_tag("css/table.css");
+include('nav.php');
 
  #$v_vm_name  = $this->table->make_columns($vm_name,0);
  #$v_zone = $this->table->make_columns($zone,0);
@@ -64,7 +67,7 @@ echo "</table>";
  echo br(2);
 
  ?>
-
+</div>
 </body>
 
 

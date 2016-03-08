@@ -6,7 +6,7 @@
 
 <?php
 echo link_tag("css/table.css");
-
+include('nav.php');
 echo ' <table border="1"> <tr> <td> Alarm Name </td>
 <td> Alarm description  </td>
 <td> Alarm Id </td>

@@ -2,8 +2,11 @@
 
 <body>
 <?php
-echo link_tag("css/table.css");
+echo link_tag("css/table.css"); ?>
 
+<?php include 'nav.php' ?>
+
+<?php
 echo ' <table border="1"> <tr> 
 <td> Meter name </td>
 <td> Type </td>

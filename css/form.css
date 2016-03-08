@@ -23,7 +23,11 @@ select
 {
 color: #781351;
 background: #fee3ad;
-border: 1px solid #781351
+border: 1px solid #781351;
+margin-left:0px;
 }
 
+.form{
+margin-left:200px;
+}
 

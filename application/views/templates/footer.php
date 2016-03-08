@@ -4,7 +4,7 @@
 
 <footer>
 GsLab  
- <em>&copy; 2015</em>
+ <em>&copy; 2016</em>
 <a href=" <?php  echo site_url()   ?> ">HOME</a>
 </footer>
  </html>

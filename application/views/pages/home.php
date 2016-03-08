@@ -22,7 +22,7 @@
 
 
 <ul>
-<li><a class="active" href="#home">Home</a></li>
+<li><a class="active" href="  <?php echo site_url("pages/index")?>           ">Home</a></li>
 <li><a href=" <?php  echo site_url("pages/view")   ?>                       ">Vm List</a></li>
 <li><a href=" <?php  echo site_url("pages/meterlist")   ?>                       ">Meter List</a></li>
 <li><a href=" <?php  echo site_url("pages/alarmlist")  ?>">Show Alarms</a></li>
