@@ -38,7 +38,7 @@ $token = substr($header,39,32);
 
 
 
-print_r($token);
+#print_r($token);
 
 
 curl_close($curl);
@@ -46,5 +46,5 @@ curl_close($curl);
 return $token;
 }
 
-$res = getToken();
+#$res = getToken();
 ?>

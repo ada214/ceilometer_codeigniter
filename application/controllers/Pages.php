@@ -9,13 +9,19 @@ class Pages extends CI_Controller{
 #        $this->view();
         $data['title'] = "ceilometer based apis";
  #       $this->load->view('templates/header', $data);
+
+
+
         $this->load->view('pages/home');
+
+    
+
 #       $this->load->view('templates/footer', $data);
 #        $this->alarmlist();
 
 #        $this->meterlist();
 #        $this->createalarm();
-
+#        $this->login();
     }
 
     public function view($page = 'home'){
@@ -315,8 +321,28 @@ $try ='{"alarm_actions": ["log:///temp/alarm_log.txt"], "description":"'.$descri
 
 
     }
-}
 
+    public function login(){
+            $this->load->helper('html');
+            $this->load->helper('form');
+
+        if($this->input->post('submit')==true){
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+
+            echo "This is ".$username." d  ".$password;
+            echo "this is voew fr long";
+
+        }
+        else{
+            $data['title']="This is title";
+            $this->load->view('templates/header',$data);
+            $this->load->view('pages/simple_login');
+            $this->load->view('templates/footer',$data);
+        }
+    }
+
+}
 
 
 ?>
