@@ -7,7 +7,8 @@ echo link_tag("css/table.css"); ?>
 <?php include 'nav.php' ?>
 
 <?php
-echo ' <table border="1"> <tr> 
+echo ' <table border="1" style="position: relative;
+    top: 20px;z-index:-1"> <tr> 
 <td> Meter name </td>
 <td> Type </td>
 <td> Unit </td>

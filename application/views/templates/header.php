@@ -6,7 +6,7 @@
 <body>
 
 
-<header>
+<header style="position:fixed;top:0px; left:101px; width:90%">
 <h1> Ceilometer apis based alarm creation, updation and deletion </h1>
 </header>
 

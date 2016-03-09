@@ -5,23 +5,20 @@
 <?php echo link_tag('css/form.css'); ?>
 
 <?php include('nav.php'); ?>
-<?php echo form_open('pages/deletealarm_scripti',array("class"=>"form")); ?>
+<?php echo form_open('pages/deletealarm_scripti',array("class"=>"form","style"=>"position: relative;
+    top: 20px;margin-left: 200;")); ?>
 
 <fieldset>
     <legend><h2>Delete alarm </h2></legend>
 
 Alarm names : <?php echo br(1); ?>
 
-
-
 <?php 
 
 $options = array_combine($alarm_id,$alarm_name);
 echo form_dropdown("alarm_id",$options);
 
-
 ?>
-
 
 <!--
 
@@ -45,9 +42,6 @@ echo form_dropdown("alarm_id",$options);
 
  -->
 </fieldset>
-
-
-
 <?php form_close();?>
 
 

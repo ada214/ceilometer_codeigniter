@@ -46,7 +46,8 @@ function validate(){
 
 <?php 
 include('nav.php');
-$options = array("name"=> "alarmpara","onsubmit"=>"return validate() ","class"=>"form");
+$options = array("name"=> "alarmpara","onsubmit"=>"return validate() ","class"=>"form","style"=>"position: relative;
+    top: 10px;");
 echo form_open('pages/saveinput',$options); ?>
 <?php echo heading(' Alarm input parameteres '); ?>
  <fieldset>

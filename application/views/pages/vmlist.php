@@ -12,7 +12,8 @@ include('nav.php');
  #$v_vm_name  = $this->table->make_columns($vm_name,0);
  #$v_zone = $this->table->make_columns($zone,0);
 
-echo ' <table border="1"> <tr> <td> Vm Name </td> 
+echo ' <table border="1" style="position: fixed;
+    top: 106px"> <tr> <td> Vm Name </td> 
 <td> Zone </td> 
 <td> IP Address  </td> 
 <td> Status </td>

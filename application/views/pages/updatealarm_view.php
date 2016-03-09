@@ -62,7 +62,8 @@ include('nav.php');
 $form_attr = array("name"=>"updatealarm","onsubmit"=>"return validate()","class"=>"form");
 
 echo form_open('pages/updatealarm_script',$form_attr); ?>
-<fieldset>
+<fieldset style="position: relative;
+    top: 20px;">
 <legend>  Update Alarm  </legend>
 <?php 
 $options = array_combine($alarm_id,$alarm_name);

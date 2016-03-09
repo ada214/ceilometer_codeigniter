@@ -16,12 +16,16 @@
 <body>
 
 
-<header>
+<header style="position: fixed;
+    top: 0px;
+        width: 90%;
+           ">
 <h1> Ceilometer apis based alarm creation, updation and deletion </h1>
 </header>
 
 
-<ul>
+<ul style="position: relative;
+    top: 10px;">
 <li><a class="active" href="  <?php echo site_url("pages/index")?>           ">Home</a></li>
 <li><a href=" <?php  echo site_url("pages/view")   ?>                       ">Vm List</a></li>
 <li><a href=" <?php  echo site_url("pages/meterlist")   ?>                       ">Meter List</a></li>
@@ -37,7 +41,9 @@
 <section>
 
 
-<div style="margin-left:25%;padding:1px 16px;height:100px;">
+<div style=" position: fixed;
+    top: 117px;
+        left: 406px; /*padding:1px 16px;height:100px;*/">
 
 
 <p>Used php for making rest calls and performed CRUD operations.<p>
@@ -52,9 +58,17 @@
 </body>
 
 
-<div id="fixedfooter"> 
+<div style="position: fixed;
+    bottom: 0px;
+        width: 90%;
+            left: 98px;
+                background-color: LightSteelBlue;
+                    color: white;
+                        /* clear: both; */
+                            text-align: center;
+                                padding: 5px;"> 
 GsLab
- <em>&copy; 2015</em>
+ <em>&copy; 2016</em>
  <a href=" <?php  echo site_url()   ?> ">HOME</a>
 </div>
 
