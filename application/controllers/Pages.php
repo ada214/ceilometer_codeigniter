@@ -15,16 +15,16 @@ class Pages extends CI_Controller{
 
 
 
-#        $this->load->view('pages/home');
+        $this->load->view('pages/home');
 
     
 
 #       $this->load->view('templates/footer', $data);
 #        $this->alarmlist();
-
+#
 #        $this->meterlist();
 #        $this->createalarm();
-        $this->login();
+#        $this->login();
     }
 
     public function view($page = 'home'){
@@ -349,17 +349,21 @@ $try ='{"alarm_actions": ["log:///temp/alarm_log.txt"], "description":"'.$descri
             else if($auth_info['status_code']==201 || $auth_info['status_code']==200  ){
 
 #            set_user_pass($username,$password);
-                $this->load->library('session');    
+#                $this->load->library('session');    
                
-               $newdata = array(
+ /*              $newdata = array(
                 "username"=>$username,
                 "password"=>$password,
                 "logged_in"=>TRUE
                 );
+                */
 
 #                $this->session->set_userdata($newdata);
+        
+                define('USERNAME_A',serialize($username) );
+                define('PASSWORD_A',serialize($password) );
 
-                $this->load->view('pages/home');
+#                $this->load->view('pages/home');
 
            
             }
