@@ -13,10 +13,8 @@ class Pages extends CI_Controller{
         $data['title'] = "ceilometer based apis";
  #       $this->load->view('templates/header', $data);
 
-
-
-        $this->load->view('pages/home');
-
+       $this->load->view('pages/home');
+#######################################################################
     
 
 #       $this->load->view('templates/footer', $data);
