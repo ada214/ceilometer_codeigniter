@@ -1,6 +1,9 @@
 <?php
 require_once('utility.php');
 require_once('conf.php');
+require_once('gettoken.php');
+
+
 
 class Pages extends CI_Controller{
 
@@ -12,7 +15,7 @@ class Pages extends CI_Controller{
 
 
 
-        $this->load->view('pages/home');
+#        $this->load->view('pages/home');
 
     
 
@@ -21,7 +24,7 @@ class Pages extends CI_Controller{
 
 #        $this->meterlist();
 #        $this->createalarm();
-#        $this->login();
+        $this->login();
     }
 
     public function view($page = 'home'){
@@ -329,17 +332,54 @@ $try ='{"alarm_actions": ["log:///temp/alarm_log.txt"], "description":"'.$descri
         if($this->input->post('submit')==true){
             $username = $this->input->post('username');
             $password = $this->input->post('password');
+            
+            
+            setpara($username,$password);
 
-            echo "This is ".$username." d  ".$password;
-            echo "this is voew fr long";
+            $auth_info = auth();
+            
+#            echo  " \n\n\n\n\n\n  Receoved status code ".$auth_info['status_code'];
+          #  echo "This is ".$username." d  ".$password;
+          #  echo "this is voew fr long";
+            if($auth_info['status_code']==401){
+ #               echo "failure";
+                $this->error();
+
+            }
+            else if($auth_info['status_code']==201 || $auth_info['status_code']==200  ){
+
+#            set_user_pass($username,$password);
+                $this->load->library('session');    
+               
+               $newdata = array(
+                "username"=>$username,
+                "password"=>$password,
+                "logged_in"=>TRUE
+                );
+
+#                $this->session->set_userdata($newdata);
+
+                $this->load->view('pages/home');
+
+           
+            }
 
         }
         else{
             $data['title']="This is title";
             $this->load->view('templates/header',$data);
-            $this->load->view('pages/simple_login');
+            $this->load->view('pages/login');
             $this->load->view('templates/footer',$data);
         }
+        
+    }
+    public function error(){
+#            $this->index();        
+        
+#            $this->load->view('templates/header',$data);
+            $this->load->view('pages/error');
+  #          $this->load->view('templates/footer',$data);
+       
     }
 
 }
