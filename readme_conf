@@ -1,0 +1,2 @@
+The Pages is the main controller for project.
+All flow starts from Pages to views. Default function from controller is index()
