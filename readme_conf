@@ -1,3 +1,5 @@
 The Pages is the main controller for project.
 All flow starts from Pages to views. Default function from controller is index()
 Default home page is Home page and loaded in index() function from Pages controller.( ceilometer_codeigniter/application/views/pages/home.php)
+1) You have to cinfigure apache home directory and .htaccess file.
+2) Htaccess file is present in Codeigniter directory. This directory contains the application system user_guide directories
