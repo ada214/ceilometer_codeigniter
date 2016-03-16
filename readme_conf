@@ -1,2 +1,3 @@
 The Pages is the main controller for project.
 All flow starts from Pages to views. Default function from controller is index()
+Default home page is Home page and loaded in index() function from Pages controller.( ceilometer_codeigniter/application/views/pages/home.php)
